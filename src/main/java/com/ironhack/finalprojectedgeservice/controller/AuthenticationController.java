@@ -1,7 +1,6 @@
 package com.ironhack.finalprojectedgeservice.controller;
 
 import com.ironhack.finalprojectedgeservice.exception.NotValidCredentialsException;
-import com.ironhack.finalprojectedgeservice.model.dto.DoctorDTO;
 import com.ironhack.finalprojectedgeservice.model.dto.UserDTO;
 import com.ironhack.finalprojectedgeservice.model.security.User;
 import com.ironhack.finalprojectedgeservice.repository.UserRepository;

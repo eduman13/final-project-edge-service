@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.ByteArrayInputStream;
 import java.util.List;
 
+@CrossOrigin(origins="*")
 @RestController
 public class PatientController {
 
