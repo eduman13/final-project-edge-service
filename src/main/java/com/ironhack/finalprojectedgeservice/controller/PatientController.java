@@ -63,4 +63,22 @@ public class PatientController {
     public MedicationDTO findByPatient(@PathVariable("id") Long patientId) {
         return medicationService.findByPatient(patientId);
     }
+
+    @GetMapping("/patient/find_all")
+    @ResponseStatus(HttpStatus.OK)
+    public List<PatientDTO> findAll() {
+        return patientService.findAll();
+    }
+
+    @DeleteMapping("/patient/delete/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deletePatient(@PathVariable("id") Long patientId) {
+        patientService.deletePatient(patientId);
+    }
+
+    @PostMapping("/patient/create")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void createPatient(@RequestBody PatientDTO patientDTO) {
+        patientService.createPatient(patientDTO);
+    }
 }

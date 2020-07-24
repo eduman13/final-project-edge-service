@@ -20,4 +20,16 @@ public class PatientService {
     public PatientDTO findById(Long id) {
         return patientClient.findById(id);
     }
+
+    public List<PatientDTO> findAll() {
+        return patientClient.findAll();
+    }
+
+    public void deletePatient(Long paientId) {
+        patientClient.deletePatient(paientId);
+    }
+
+    public void createPatient(PatientDTO patientDTO) {
+        patientClient.createPatient(patientDTO);
+    }
 }

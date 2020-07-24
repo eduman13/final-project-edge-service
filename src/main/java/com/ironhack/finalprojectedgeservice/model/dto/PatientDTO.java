@@ -13,6 +13,7 @@ public class PatientDTO {
     private Integer number;
     private Integer portal;
     private String street;
+    private Long doctorId;
 
     public PatientDTO() {
     }
@@ -87,5 +88,13 @@ public class PatientDTO {
 
     public void setStreet(String street) {
         this.street = street;
+    }
+
+    public Long getDoctorId() {
+        return doctorId;
+    }
+
+    public void setDoctorId(Long doctorId) {
+        this.doctorId = doctorId;
     }
 }

@@ -80,4 +80,17 @@ public class DoctorDTO {
         this.number = number;
     }
 
+    @Override
+    public String toString() {
+        return "DoctorDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surnames='" + surnames + '\'' +
+                ", schoolNumber='" + schoolNumber + '\'' +
+                ", birthday=" + birthday +
+                ", street='" + street + '\'' +
+                ", portal=" + portal +
+                ", number=" + number +
+                '}';
+    }
 }

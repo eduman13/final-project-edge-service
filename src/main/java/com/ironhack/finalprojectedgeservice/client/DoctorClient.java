@@ -5,6 +5,8 @@ import com.ironhack.finalprojectedgeservice.model.dto.DoctorDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @FeignClient(name="doctor-service")
 public interface DoctorClient {
 
@@ -14,5 +16,8 @@ public interface DoctorClient {
     @PutMapping("/doctor/update_address/{id}")
     void updateAddress(@PathVariable Long id,
                               @RequestBody AddressDTO addressDTO);
+
+    @GetMapping("/doctor/find_all")
+    List<DoctorDTO> findAll();
 
 }

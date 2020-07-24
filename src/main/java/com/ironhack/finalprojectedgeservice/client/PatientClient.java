@@ -26,4 +26,13 @@ public interface PatientClient {
     @GetMapping("/medication/find_by_patient/{id}")
     MedicationDTO findByPatient(@PathVariable("id") Long patientId);
 
+    @GetMapping("/patient/find_all")
+    List<PatientDTO> findAll();
+
+    @DeleteMapping("/patient/delete/{id}")
+    void deletePatient(@PathVariable("id") Long patientId);
+
+    @PostMapping("/patient/create")
+    void createPatient(@RequestBody PatientDTO patientDTO);
+
 }

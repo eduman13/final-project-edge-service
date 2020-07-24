@@ -6,6 +6,8 @@ import com.ironhack.finalprojectedgeservice.model.dto.DoctorDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DoctorService {
 
@@ -19,4 +21,9 @@ public class DoctorService {
     public void updateAddress(Long id, AddressDTO addressDTO) {
         doctorClient.updateAddress(id, addressDTO);
     }
+
+    public List<DoctorDTO> findAll() {
+        return doctorClient.findAll();
+    }
+
 }

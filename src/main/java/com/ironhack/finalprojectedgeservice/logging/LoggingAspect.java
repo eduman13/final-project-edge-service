@@ -20,13 +20,13 @@ public class LoggingAspect {
     @Autowired
     LogClient logClient;
 
-    @AfterReturning(pointcut="execution(* com.ironhack.finalprojectedgeservice.controller.PatientController.*(..))")
+    @AfterReturning(pointcut="execution(* com.ironhack.finalprojectedgeservice.controller.*.*(..))")
     public void loggingOk() {
         logClient.postLog(createError(StatusLog.OK, Optional.ofNullable(null)));
     }
 
     @AfterThrowing(
-            pointcut="execution(* com.ironhack.finalprojectedgeservice.controller.PatientController.*(..))",
+            pointcut="execution(* com.ironhack.finalprojectedgeservice.controller.*.*(..))",
             throwing="exception"
     )
     public void loggingFail(Throwable exception) {

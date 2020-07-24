@@ -1,6 +1,7 @@
 package com.ironhack.finalprojectedgeservice.controller;
 
 import com.ironhack.finalprojectedgeservice.exception.NotValidCredentialsException;
+import com.ironhack.finalprojectedgeservice.model.dto.DoctorDTO;
 import com.ironhack.finalprojectedgeservice.model.dto.UserDTO;
 import com.ironhack.finalprojectedgeservice.model.security.User;
 import com.ironhack.finalprojectedgeservice.repository.UserRepository;
@@ -43,6 +44,13 @@ public class AuthenticationController {
     public UserDTO findByUsername(@RequestParam String username) {
         return userService.findByUsername(username);
     }
+
+    @PostMapping("/user/create_user")
+    @ResponseStatus(HttpStatus.CREATED)
+    public UserDTO createUser(@RequestBody UserDTO userDTO) {
+        return userService.createUser(userDTO);
+    }
+
 }
 
 
