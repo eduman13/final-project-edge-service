@@ -2,7 +2,7 @@
 ## Introduction
 The following app consists of a small web page to manage the patients and doctors of a health center.
 
-##Users
+## Users
 
 The application consists of two types of users: administrators and doctors. 
 Administrators can consult a list of doctors where they can access the information of each one, 
@@ -14,7 +14,7 @@ Doctors can access a list of their patients. Being able to access your informati
 your medical history and your current medication. 
 They can access your information and change your address if they want.
 
-##Notes
+## Notes
 
 The application is displayed in heroku in the following url: https://final-project-angular-front.herokuapp.com/login
 
