@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name="doctor-service")
+@FeignClient(name="doctor-service", url="https://final-project-doctor-service.herokuapp.com/")
 public interface DoctorClient {
 
     @GetMapping("/doctor/find_by_id/{id}")
